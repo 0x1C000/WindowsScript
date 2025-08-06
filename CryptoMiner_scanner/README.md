@@ -54,6 +54,7 @@ Richiede PowerShell versione 5 o superiore.
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force
 
+```
 4. Eseguire lo script desiderato:
 
 Per eseguire il kit completo:
@@ -80,4 +81,5 @@ Ox1C
 
 Utilizzare gli script con consapevolezza e solo su sistemi personali o autorizzati.
 Non è garantita la compatibilità su versioni di Windows precedenti a Windows 10 o su sistemi non standardizzati.
+
 
