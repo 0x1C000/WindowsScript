@@ -63,9 +63,9 @@ Per eseguire il kit completo:
 
 Per eseguire solo lo scanner dei processi Chrome:
 
-
+```powershell
 .\chrome_process_scanner.ps1
-
+```
 Note
 Gli script non richiedono moduli esterni: tutto è integrato e in chiaro.
 
@@ -76,10 +76,12 @@ Gli script sono stati progettati per un utilizzo manuale e consapevole: nessun a
 La lista di keyword e flag sospetti è modificabile all'interno degli script: può essere personalizzata e aggiornata.
 
 Autore
+```powershell
 Ox1C
-
+```
 
 Utilizzare gli script con consapevolezza e solo su sistemi personali o autorizzati.
 Non è garantita la compatibilità su versioni di Windows precedenti a Windows 10 o su sistemi non standardizzati.
+
 
 
