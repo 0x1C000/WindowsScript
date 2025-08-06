@@ -3,85 +3,79 @@ Author: Ox1C
 
 ---
 
-## Descrizione
+## Description.
 
-Questa repository contiene due script PowerShell avanzati, progettati per aiutare l'utente a:
+This repository contains two advanced PowerShell scripts designed to help the user to:
 
-- Rilevare e rimuovere eventuali crypto-miner nascosti o persistenti nel sistema Windows
-- Analizzare e monitorare in tempo reale i processi di Google Chrome per individuare eventuali attività sospette (miner in esecuzione tramite il browser)
-
----
-
-## Contenuto
-
-- `full_anti_miner_kit_v2.ps1`  
-  Script completo che esegue una scansione approfondita del sistema:
-
-  - Verifica e pulisce le chiavi di registro Run e RunOnce
-  - Analizza e rimuove Scheduled Tasks sospetti
-  - Analizza e disabilita servizi di sistema sospetti
-  - Esegue la scansione delle cartelle TEMP e AppData per rilevare file potenzialmente malevoli
-  - Controlla eventuali manipolazioni dei collegamenti (.lnk) di Chrome
-  - Log dettagliato e report in CSV generati sul Desktop
-
-- `chrome_process_scanner.ps1`  
-  Script leggero e autonomo che analizza tutti i processi chrome.exe attivi:
-
-  - Stampa per ogni processo: PID, RAM usata, command line completa
-  - Evidenzia eventuali flag sospetti (--headless, --disable-gpu, ecc.)
-  - Evidenzia eventuali keyword riconducibili a mining
-  - Permette un'analisi rapida di attività anomale via Chrome
+- Detect and remove any hidden or persistent crypto-miners in the Windows system
+- Analyze and monitor Google Chrome processes in real time for suspicious activity (miners running through the browser)
 
 ---
 
-## Sistema operativo di destinazione
+## Content
+
+- `full_anti_miner_kit_v2.ps1` 
+ Complete script that performs a thorough system scan:
+
+  - Checks and cleans Run and RunOnce registry keys.
+  - Analyzes and removes suspicious Scheduled Tasks
+  - Scans and disables suspicious system services
+  - Scans TEMP and AppData folders for potentially malicious files
+  - Checks for manipulation of shortcuts (.lnk) in Chrome
+  - Detailed logs and CSV reports generated on the Desktop
+
+- `chrome_process_scanner.ps1` 
+ Lightweight, self-contained script that scans all active chrome.exe processes:
+
+  - Prints for each process: PID, RAM used, full command line
+  - Highlights any suspicious flags (--headless, --disable-gpu, etc.).
+  - Highlights any keywords that can be traced back to mining
+  - Allows quick analysis of anomalous activity via Chrome
+
+---
+
+## Target operating system
 
 - Windows 10
 - Windows 11
 
-Richiede PowerShell versione 5 o superiore.
+Requires PowerShell version 5 or higher.
 
 ---
 
-## Come usare gli script
+## How to use the scripts.
 
-1. Clonare la repository o scaricare i singoli file `.ps1`.
+1. Clone the repository or download the individual `.ps1` files.
 
-2. Avviare PowerShell come Amministratore.
+2. Start PowerShell as Administrator.
 
-3. Eseguire i seguenti comandi per permettere l'esecuzione temporanea degli script:
+3. Run the following commands to allow temporary execution of scripts:
 
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force
 
 ```
-4. Eseguire lo script desiderato:
+4. Execute the desired script:
 
-Per eseguire il kit completo:
+To execute the full kit:
 
 .\full_anti_miner_kit_v2.ps1
 
-Per eseguire solo lo scanner dei processi Chrome:
+To run only the Chrome process scanner:
 
 ```powershell
 .\chrome_process_scanner.ps1
 ```
-Note
-Gli script non richiedono moduli esterni: tutto è integrato e in chiaro.
+Notes
+The scripts do not require external modules: everything is integrated and in plain text.
 
-I log e i report CSV vengono salvati automaticamente sul Desktop dell'utente.
+Logs and CSV reports are automatically saved to the user's Desktop.
 
-Gli script sono stati progettati per un utilizzo manuale e consapevole: nessun automatismo invasivo viene applicato senza che l'utente possa visualizzarlo (tranne la rimozione automatica di servizi e task chiaramente sospetti).
+The scripts are designed for manual, self-aware use: no intrusive automatisms are applied without the user being able to view them (except for automatic removal of clearly suspicious services and tasks).
 
-La lista di keyword e flag sospetti è modificabile all'interno degli script: può essere personalizzata e aggiornata.
+The list of suspicious keywords and flags is editable within the scripts: it can be customized and updated.
 
-Autore
+Author
 ```powershell
 Ox1C
 ```
-
-Utilizzare gli script con consapevolezza e solo su sistemi personali o autorizzati.
-Non è garantita la compatibilità su versioni di Windows precedenti a Windows 10 o su sistemi non standardizzati.
-
-
-
