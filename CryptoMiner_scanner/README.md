@@ -80,3 +80,4 @@ Ox1C
 
 Utilizzare gli script con consapevolezza e solo su sistemi personali o autorizzati.
 Non è garantita la compatibilità su versioni di Windows precedenti a Windows 10 o su sistemi non standardizzati.
+
